@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>선택자 심화</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 심화</title>
+    <style type="text/css">
+      /* 복합+다중 */
+      .text {
+        font-size: 14px;
+        color: blueviolet;
+      }
+      .bd {
+        font-weight: bold;
+      }
+      /* 부정 */
+      p:not(.bd) {color: #000;}
+      /* 우선순위 + !important;=스타일을 강제적용 */
+      ul {
+        overflow: hidden;
+        margin: 50px;
+      }
+
+      li {color: brown;}
+      .li_t1 {color: chartreuse !important;}
+      /* !important >  인라인스타일 > id > class > tag > 전체선택자(*) */
+
+
+    </style>
+  </head>
+  <body>
+  <!-- id/class 차이점 
+  : id = 이름으로 한번만 사용하는 것 > 큰 단락, 특정한 이름의 위치를 지정
+  : class = 하나의 이름으로 여러번 사용 하는 것 > 작은 단락, 잦은 변화, 기본세팅값
+
+  * 다중, 복합 선택이 가능한 형태! class의 경우 name(띄어쓰기)name 중복사용 가능
   
-</body>
+  * 부정선택자 : 특정한 요소를 제외한 나모지 요소를 선택하기 위해 사용
+  :not(선택자)
+  -->
+    <div id="wrap">
+      <h1>선택자</h1>
+      <p class="text">: 해당하는 요소를 선택하는 것</p>
+      <p class="text bd" id="test">: 해당하는 요소를 선택하는 것</p>
+      <p class="text">: 해당하는 요소를 선택하는 것</p>
+    </div>
+
+    <ul>
+      <li style="color: cornflowerblue;" class="li_t1">test1</li>
+      <li>test2</li>
+      <li>test3</li>
+      <li>test4</li>
+    </ul>
+  </body>
 </html>
