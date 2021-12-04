@@ -53,6 +53,11 @@
   .boxs4 {
     box-shadow: 5px -5px 5px #ffa5a5, -5px 5px 5px #75e6a0; /* 다중그림자 부여 쉼표로 구분 */
   }
+
+  /* 블러효과 - 가우시안블러 */
+  .fil_b {
+    filter: blur(4px);
+  }
   </style>
 </head>
 <body>
@@ -67,6 +72,6 @@
   <div class="gr_toright boxs4">왼쪽에서 오른쪽으로</div>
   <div class="gr_tondeg">원하는 각도의 방향 설정</div>
   
-  <div class="gr_ra">원형 그라디언트</div>
+  <div class="gr_ra fil_b">원형 그라디언트</div>
 </body>
 </html>
