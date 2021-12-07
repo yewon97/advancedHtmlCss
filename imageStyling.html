@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이미지 활용한 스타일링</title>
+  <style type="text/css">
+    img {
+      float: left;
+      margin: 10px;
+      width: 20%;
+    }
+    img:nth-child(1) {
+      filter: blur(2px);
+      /* 블러효과(px) - 값이 높을 수록 효과가 큼 */
+    }
+    img:nth-child(2) {
+      filter: brightness(190%);
+      /* 밝기조정(%) - 0(dark) < 100(default) < 101(bright) */
+    }
+    img:nth-child(3) {
+      filter: contrast(200%);
+      /* 대비조정(%) - 0(dark) < 100(default) < 101(bright) */
+    }
+    img:nth-child(4) {
+      filter: grayscale(89%);
+      /* 회색조(%) - 0(default) ~ 100 */
+    }
+    img:nth-child(5) {
+      filter: hue-rotate(250deg);
+      /* 색조회전(deg) - 0(default) ~ 360 */
+    }
+    img:nth-child(6) {
+      filter: invert(60%);
+      /* 색반전(%) - 0(default) ~ 100 (흰-검) 밝기모드조정 */
+    }
+    img:nth-child(7) {
+      filter: saturate(300%);
+      /* 채도변화(%) - 0(색상의 양▼) < 100(default) < 101(색상의 양▲) */
+    }
+    img:nth-child(8) {
+      filter: sepia(50%);
+      /* 세피아(%) - 0(default) ~ 100, 빈티지(컨셉) */
+    }
+
+    /* 다중효과 - 동시적용 */
+    img:nth-child(9) {
+      filter: blur(5px) grayscale(70%);
+    }
+
+    /* 필터를 제거 - none */
+    img:nth-child(10) {
+      filter: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>filter</h1>
+  <p>
+    : 사진에 다양한 이미지 변화효과를 부여, 블러나 그외의 동작을 함께 사용하여 스타일링을 줄 수 있는 함수!
+  </p>
+
+  <figure>
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+    <img src="ch05/images/bg2.png" alt="">
+  </figure>
+</body>
+
+</html>
