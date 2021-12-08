@@ -10,6 +10,7 @@
     * {
       padding: 0;
       margin: 0;
+      transition: all ease-in 0.5s; /* input 효과 부드럽게~~ */
     }
 
     form {
@@ -40,6 +41,13 @@
       background: url(images/search-solid.png) 4% no-repeat;
       background-size: 20px;
       padding-left: 50px;
+      outline: none; /* 가장 바깥부분을 둘러싸고 있는 아웃라인 부분의 스타일을 설정 */
+    }
+
+    /* 서식의 활성화 경우 : focus */
+    input:focus {
+      background-color: azure;
+      border: 3px solid rgb(230, 139, 139);
     }
   </style>
 </head>
