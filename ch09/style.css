@@ -81,5 +81,5 @@ header {
   height: 100%;
   overflow: hidden;
   position: relative;
-  left: 21%; /* 21% 왼쪽 겹치는 fixed 21%만큼 밀어서 배치 */
+  margin-left: 21%; /* 21% 왼쪽 겹치는 fixed 21%만큼 밀어서 배치 */
 }
