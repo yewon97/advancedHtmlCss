@@ -5,7 +5,10 @@ font-family: 'Playfair Display', serif; */
 * { padding: 0; margin: 0; } 
 a { text-decoration: none; color: #333; font-size: 14px; } 
 body { color: #333; font-size: 14px; } 
-img { display: block; } 
+img { 
+  display: block; 
+  max-width: 100%; /* 이미지 사이즈가 너무 커서 부모기준으로 100% 맞춤 */
+} 
 ul, ol { list-style: none;}
 
 /* header */
