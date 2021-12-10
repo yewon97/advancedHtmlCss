@@ -83,3 +83,34 @@ header {
   position: relative;
   float: right; /* fixed 겹치는 부분 해결 */
 }
+.mainbg {
+  width: 90%;
+  margin: auto;
+  margin-top: 170px;
+  position: relative; /* 부모기준 */
+}
+.mainbg img {
+  float: right;
+}
+.mainbg .text {
+  width: 60%;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+.text p {
+  font-size: 140px;
+  font-family: 'Playfair Display', serif;
+  border-bottom: 1px solid #000;
+  font-style: italic;
+  line-height: 150px;
+}
+.text p::first-letter {
+  font-size: 200px;
+}
+.text a {
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: 100px;
+  display: block;
+}
