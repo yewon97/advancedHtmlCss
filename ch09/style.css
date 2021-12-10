@@ -6,6 +6,7 @@ font-family: 'Playfair Display', serif; */
 a { text-decoration: none; color: #333; font-size: 14px; } 
 body { color: #333; font-size: 14px; } 
 img { display: block; } 
+ul, ol { list-style: none;}
 
 /* header */
 header {
@@ -17,4 +18,34 @@ header {
   overflow: hidden;
   position: relative; /* 컨텐츠 정렬의 기준 */
   z-index: 999; /* fixed 배너보다 제일 위에 배치하기 위해 */
+  text-align: center; /* ul 메뉴를 중앙정렳하기 위해 */
+}
+.header__logo {
+  width: 15%;
+  display: block;
+  line-height: 70px;
+  position: absolute;
+  left: 100px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.header__nav ul {
+  display: inline-block;
+}
+.header__nav li {
+  float: left;
+  margin: 0 20px;
+  line-height: 70px;
+}
+.header__icons {
+  height: 16px;
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  margin-top: -8px;
+}
+.header__icons a {
+  float: left;
+  margin-left: 30px;
 }
