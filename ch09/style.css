@@ -91,6 +91,7 @@ header {
   margin: auto;
   margin-top: 170px;
   position: relative; /* 부모기준 */
+  overflow: hidden;
 }
 .mainbg img {
   float: right;
@@ -116,4 +117,46 @@ header {
   font-weight: 200;
   margin-top: 100px;
   display: block;
+}
+.magazine {
+  width: 90%;
+  margin: auto;
+  margin-top: 170px;
+  overflow: hidden;
+}
+.magazine::before {
+  content: 'Magazine';
+  display: block;
+  text-align: center;
+  line-height: 150px;
+  font-family: 'Playfair Display', serif; 
+  font-size: 28px;
+  font-weight: 800;
+}
+.con_bn {
+  width: 33.3%;
+  float: left;
+  overflow: hidden;
+}
+.con_bn:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.con {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 200;
+}
+.con a {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: underline;
+  display: block;
+  padding: 30px 0;
 }
