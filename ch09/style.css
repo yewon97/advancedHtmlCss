@@ -16,7 +16,7 @@ header {
   border-bottom: 1px solid #333;
   box-shadow: 0 0 15px #333;
   overflow: hidden;
-  position: relative; /* 컨텐츠 정렬의 기준 */
+  position: fixed; /* 컨텐츠 정렬의 기준 */
   z-index: 999; /* fixed 배너보다 제일 위에 배치하기 위해 */
   text-align: center; /* ul 메뉴를 중앙정렳하기 위해 */
 }
@@ -48,4 +48,30 @@ header {
 .header__icons a {
   float: left;
   margin-left: 30px;
+}
+/* fixBn */
+.fixbn {
+  width: 21%;
+  height: 100%;
+  position: fixed;
+  border-right: 1px solid #333;
+  text-align: center;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+/* 멀티미디어 속성들은 다 글자와 같은 성격을 가지고 있음 */
+.fixbn video {
+  display: block;
+  width: 65%;
+  margin: 200px auto 100px;
+}
+.fixbn h2 {
+  font-family: 'Playfair Display', serif;
+  color: #29624f;
+}
+.fixbn p {
+  margin-top: 15px;
+  text-decoration: underline;
+  line-height: 19px;
 }
