@@ -75,3 +75,10 @@ header {
   text-decoration: underline;
   line-height: 19px;
 }
+/* contents */
+.contents {
+  width: 79%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
