@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D 원근표현</title>
+  <style type="text/css">
+    * {padding: 0; margin: 0;}
+    /* pre */
+    #pre {
+      width: 500px;
+      height: 500px;
+      background-color: #5eaa54;
+      margin: 50px;
+      float: left;
+      perspective: 500px;  /* 3D 공간에서 요소와의 거리감을 지정 - 속성값이 작을수록 가깝고 클수록 멀게보임 */
+      perspective-origin: 100% 100%; /* 원금감에 대한 중심축변화 x y(50% 50%) */
+    }
+    #pre .test {
+      width: 500px;
+      height: 500px;
+      background-color: #e6cba7;
+      text-align: center;
+      line-height: 500px;
+      transition: all 0.5s;
+    }
+    #pre:hover .test {
+      transform: rotateX(50deg);
+    }
+    /* back */
+    #back {
+      width: 500px;
+      height: 500px;
+      background-color: #5eaa54;
+      margin: 50px;
+      float: left;
+    }
+    #back .test {
+      width: 500px;
+      height: 500px;
+      background-color: #e6cba7;
+      text-align: center;
+      line-height: 500px;
+      transition: all 0.5s;
+    }
+    #back:hover .test {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="pre">
+    <p class="test">원근감</p>
+  </div>
+
+  <div id="back">
+    <p class="test">요소의 뒷면 표기유무</p>
+  </div>
+</body>
+</html>
