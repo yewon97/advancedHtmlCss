@@ -43,6 +43,8 @@
       text-align: center;
       line-height: 500px;
       transition: all 0.5s;
+      backface-visibility: visible; /* 회전시 뒷면 표기유무 - 뒷면표시 */
+      backface-visibility: hidden; /* 회전시 뒷면 표기유무 - 뒷면제거 */
     }
     #back:hover .test {
       transform: rotateY(180deg);
