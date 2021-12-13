@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글자 이동하는 애니메이션</title>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    *{padding: 0; margin: 0; font-family: 'Montserrat', sans-serif;}
+
+    #main {
+      width: 30%;
+      height: 500px;
+      border: 1px solid #ccc;
+      color: #50468b;
+      overflow: hidden;
+      margin: 100px auto;
+      position: relative;
+    }
+    p {
+      width: 1000px;
+      position: absolute;
+      font-size: 50px;
+      left: -1000px;
+      animation: obj 8s;
+      animation-direction: normal;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+      animation-fill-mode: both;
+    }
+    @keyframes obj {
+      0% {
+        left: -500px;
+      }
+      100% {
+        left: 1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief</p>
+  </div>
+</body>
+</html>
