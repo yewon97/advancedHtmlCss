@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크롤 애니메이션</title>
+  <style type="text/css">
+    * {padding: 0; margin: 0;}
+    body {background-color: #000;}
+
+    div {
+      position: absolute;
+      width: 80%;
+      margin: 100px auto;
+      bottom: 50px;
+      left: 50%;
+      margin-left: -40%;
+    }
+
+		a {
+			padding-top: 60px;
+			text-align: center;
+			display: block;
+			color: #fff;
+			text-decoration: none;
+		}
+    a span {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 23px);
+      width: 46px;
+      height: 46px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    a span::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 8px);
+      width: 16px;
+      height: 16px;
+      /* 화살표 모양 만들기 위한 CSS */
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+    } 
+    a span::before { /* 번지는 애니메이션 만들기 위한 CSS */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+      border-radius: 50%;
+      opacity: 1;
+      animation: sdb 3s infinite;
+      box-sizing: border-box;
+    }
+
+    @keyframes sdb { /* ::before에 애니메이션 효과주기 */
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
+      }
+      100% {
+        opacity: 0;
+      }
+    } 
+  </style>
+</head>
+<body>
+  <div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      Scroll
+    </a>
+  </div>
+</body>
+</html>
